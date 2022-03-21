@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS stylesheet  -->
+    <link rel="stylesheet" href="CSS/style.css">
+    <!-- tailwindcss  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Money Manager</title>
+</head>
+<body>
+    <!-- heading  -->
+    <head>
+        <h1 class="text-teal-700 font-bold text-5xl text-center mt-5">Money Manager</h1>
+    </head>
+
+    <!-- main body  -->
+    <main>
+        <section class="grid lg:grid-cols-2 gap-4 m-5 p-5 justify-items-center">
+            <div class="image w-4/5 m-5">
+                <img class="" src="Images/money.png" alt="">
+            </div>
+            <div class="form w-4/5 bg-slate-50 text-center m-5">
+                 <!-- income section  -->
+                <div class="income-section">
+                    <h2 class="m-4 pt-5 text-xl font-bold">Income</h2>
+                    <h3 class="inline m-2 mr-0 p-1">Income:</h3>
+                    <input id="income-amount" class="m-2 ml-0 p-1 text-center rounded-md bg-stone-200 text-sm text-black" type="text" placeholder="Enter Your Income">
+                </div>
+
+                <!-- expenses section  -->
+                <div class="expenses-section">
+                    <h2 class="m-4 text-xl font-bold">Expenses</h2>
+
+                    <!-- food expenses  -->
+                        <div class="food">
+                        <h3 class="inline m-2 mr-0 p-1">Food:</h3>
+                        <input id="food-expenses" class="m-2 ml-0 p-1 text-center rounded-md bg-stone-200 text-sm text-black" type="text" placeholder="Enter Food Expenses">
+                    </div>
+
+                    <!-- rent expenses  -->
+                    <div class="rent">
+                        <h3 class="inline m-2 mr-0 p-1">Rent:</h3>
+                        <input id="rent-expenses" class="m-2 ml-0 p-1 text-center rounded-md bg-stone-200 text-sm text-black" type="text" placeholder="Enter Rent Expenses">
+                    </div>
+
+                    <!-- cloth expenses  -->
+                    <div class="cloth">
+                        <h3 class="inline m-2 mr-0 p-1">Cloth:</h3>
+                        <input id="cloth-expenses" class="m-2 ml-0 p-1 text-center rounded-md bg-stone-200 text-sm text-black" type="text" placeholder="Enter Cloth Expenses">
+                    </div>
+                </div>
+
+                <!-- calculation  -->
+                <div class="submit-button">
+                    <button id="calculate-button" class="block mx-auto my-3 px-6 py-2 border-solid bg-sky-500 rounded-lg text-l text-white">Calculate</button>
+                </div>
+
+                <!-- update total expenses  -->
+                <div class="total-expenses m-4 pt-3 text-xl font-bold">
+                    <h2>Total Expenses: <span id="total-expenses">00</span>/-</h2>
+                </div>
+            
+                <!-- update balance  -->
+                <div class="balance m-4 pb-3 text-xl font-bold">
+                    <h2>Balance: <span id="total-balance">00</span>/-</h2>
+                </div>
+
+                <!-- savings  -->
+                <div class="savings">
+                    <h3 class="inline m-2 mr-0 p-1">Save:</h3>
+                    <input id="Percentage" class="m-2 ml-0 p-1 text-center rounded-md bg-stone-200 text-sm text-black" type="text" placeholder="Percentage" maxlength="4" size="12" >
+                    <h3 class="inline mr-1">%</h3>
+
+                    <button id="save-button" class="mx-auto my-3 px-6 py-1 border-solid bg-sky-500 rounded-lg text-sm text-white">Save</button>
+                </div>
+
+                <!-- update saving amount  -->
+                <div class="savings m-4 pt-3 text-xl font-bold">
+                    <h2>Saving Amount: <span id="saving-amount">00</span>/-</h2>
+                </div>
+                
+                <!-- update remaining balance  -->
+                <div class="remaining-balance m-4 pb-3 text-xl font-bold">
+                    <h2>Remaining Balance: <span id="remaining-balance">00</span>/-</h2>
+                </div>
+            </div>
+            
+        </section>
+
+        <div class="error-handle">
+            <h3 id="input-error" class="mx-auto my-3 px-6 py-2 w-2/5 border-solid bg-red-500 rounded-lg text-xl text-center text-white font-bold">Enter a Valid Amount</h3>
+
+            <h3 id="over-expenses-error" class="mx-auto my-3 px-6 py-2 w-2/5 border-solid bg-red-500 rounded-lg text-xl text-center text-white font-bold">Enter Expenses Properly</h3>
+
+            <h3 id="savings-error" class="mx-auto my-3 px-6 py-2 w-2/5 border-solid bg-red-500 rounded-lg text-xl text-center text-white font-bold">Insufficient Balance for Savings</h3>
+        </div>
+    </main>
+    
+    <!-- js script  -->
+    <script src="JS/money_manager.js"></script>
+</body>
+</html>
